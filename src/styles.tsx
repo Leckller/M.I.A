@@ -14,14 +14,12 @@ import { styled } from "styled-components";
     width: 15vw;
     height: 100%;
     border: solid black 2px;
-    @media (max-width: 400px) {
-      &{
-        position: absolute;
-        border-bottom: none;
-        height: 9vh;
-        width: 20vw;
-      }
-    }
+  `
+  export const SecButton = styled.button`
+    height: 4vh;
+    width: 10vw;
+    position: absolute;
+    left: 10vw;
   `
   export const DivLayoutBox = styled.div`
     width: 85vw;
@@ -38,6 +36,7 @@ import { styled } from "styled-components";
     }
     @media (max-width: 400px) {
       width: 100vw;
+      border-left: black solid 2px
     }
   `
   export const Header = styled.header`

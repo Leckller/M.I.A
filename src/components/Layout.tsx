@@ -1,18 +1,20 @@
 import { Outlet } from "react-router-dom"
-import { DivLayoutBox, Footer, Header, Main, SecLayout } from "../styles"
+import { DivLayoutBox, Footer, Header, Main, SecButton } from "../styles"
+import SecOptions from "./SecOptions"
 
 function Layout() {
   console.log(window.innerWidth)
   return (
     <Main>
-      {(window.innerHeight <= 400) ? (
-        <SecLayout>sec</SecLayout>
-      ) : (
-        <button>---</button>
+      {(window.innerWidth >= 400) && (
+          <SecOptions/>
       )}
       <DivLayoutBox>
         <Header>
-          <span>a</span>
+        {(window.innerWidth <= 400) && (
+      <SecButton onClick={() => console.log('click')}>---</SecButton>
+        )}
+          <span></span>
           <h1>M.A.I</h1>
           <button><img src="" alt="sun" /></button>
         </Header>
