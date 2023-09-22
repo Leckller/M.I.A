@@ -1,9 +1,10 @@
 import { Outlet } from "react-router-dom"
-import { DivLayoutBox, Footer, Header, Main, SecButton } from "../styles"
+import { DivLayoutBox, Footer, Header, Main, SecButton, SecButtonLD } from "../styles"
 import SecOptions from "./SecOptions"
+import { useState } from "react"
 
 function Layout() {
-  console.log(window.innerWidth)
+  const [configs, setConfigs] = useState(false)  
   return (
     <Main>
       {(window.innerWidth >= 400) && (
@@ -12,11 +13,13 @@ function Layout() {
       <DivLayoutBox>
         <Header>
         {(window.innerWidth <= 400) && (
-      <SecButton onClick={() => console.log('click')}>---</SecButton>
+      <SecButton 
+        position={configs ? 'absolute' : 'static'}
+        onClick={() => setConfigs(!configs)}>---</SecButton>
         )}
-          <span></span>
+        {configs && <SecOptions/>}
           <h1>M.A.I</h1>
-          <button><img src="" alt="sun" /></button>
+          <SecButtonLD><img src="" alt="sun" /></SecButtonLD>
         </Header>
         <Outlet />
         <Footer>é o ruy</Footer>

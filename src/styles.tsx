@@ -8,18 +8,77 @@ import { styled } from "styled-components";
     flex-direction: row;
   `
 
-// Layout
+// SecOptions
 
   export const SecLayout = styled.section`
     width: 15vw;
     height: 100%;
     border: solid black 2px;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 400px) {
+      width: 80vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: fixed;
+      left: 0;
+      top: 0;
+      background-color: #eaeaea;
+    }
   `
-  export const SecButton = styled.button`
+  export const SecLayoutDivHead = styled.header`
+
+    @media (max-width: 400px) {
+      display: flex;
+      width: 100%;
+      height: 10vh;
+      align-items: center;
+      padding-left: 2vw;
+    }
+  ` 
+  export const SecLayoutMainDiv = styled.div`
+
+  @media (max-width: 400px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    }
+` 
+  export const SecLayoutDiv = styled.div`
+
+  button {
+    width: 100%;
+    height: 10vh;
+  }
+
+  @media (max-width: 400px) {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 15vh;
+    border: solid black 2px;    
+    }
+` 
+
+  type SecButtonType = {
+    position: string;
+  }
+  export const SecButton = styled.button<SecButtonType>`
     height: 4vh;
     width: 10vw;
-    position: absolute;
-    left: 10vw;
+    position: ${prop => prop.position};
+    z-index: 1000;
+    right: 25vw;
+  `
+  // ------------------------------------ //
+  // Layout
+
+    export const SecButtonLD = styled.button`
+    height: 4vh;
+    width: 10vw;
   `
   export const DivLayoutBox = styled.div`
     width: 85vw;
