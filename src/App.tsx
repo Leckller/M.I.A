@@ -2,8 +2,10 @@ import { Route, Routes } from "react-router-dom"
 import { Home, NotFound } from "./routes"
 import Layout from "./components/Layout"
 import { createGlobalStyle } from "styled-components"
+import { useState } from "react"
 
 function App() {
+  const [actualApi, setActualApi] = useState(0)
   const GlobalStyles = createGlobalStyle`
     * {
       margin: 0;
