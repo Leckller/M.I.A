@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom"
-import { DivLayoutBox, Footer, Header, Main, SecButton, SecButtonLD } from "../styles"
+import { DivLayoutBox, Footer, Header, Main, SecButton, SecButtonLD, TitleMAI } from "../styles"
 import SecOptions from "./SecOptions"
 import { useState } from "react"
 
@@ -18,7 +18,7 @@ function Layout() {
         onClick={() => setConfigs(!configs)}>---</SecButton>
         )}
         {configs && <SecOptions/>}
-          <h1>M.A.I</h1>
+          <TitleMAI>M.A.I</TitleMAI>
           <SecButtonLD><img src="" alt="sun" /></SecButtonLD>
         </Header>
         <Outlet />

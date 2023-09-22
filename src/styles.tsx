@@ -75,6 +75,29 @@ import { styled } from "styled-components";
   // ------------------------------------ //
   // Layout
 
+    export const TitleMAI = styled.h1`
+
+    animation: jumping 1.5s alternate;
+
+    @keyframes jumping {
+      0% {
+        transform: scale(1) rotate(0)
+      }
+      25% {
+        transform: scale(1.2) rotate(20deg)
+      }
+      50% {
+        transform: scale(1.6) rotate(0)
+      } 
+      75% {
+        transform: scale(1.2) rotate(-20deg)
+      }
+      100% {
+        transform: scale(1) rotate(0)
+      }
+  }
+    `
+
     export const SecButtonLD = styled.button`
     height: 4vh;
     width: 10vw;
@@ -92,10 +115,12 @@ import { styled } from "styled-components";
       width:100%;
       height: 80%;
     }
+
     @media (max-width: 400px) {
       width: 100vw;
       border-left: black solid 2px
     }
+
   `
   export const Header = styled.header`
     width: 100%;
@@ -109,6 +134,7 @@ import { styled } from "styled-components";
     span {
       background-color: white;
     }
+
 `
     export const Footer = styled.footer`
       width: 100%;
