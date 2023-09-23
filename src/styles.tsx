@@ -174,21 +174,37 @@ export const SecPerfil = styled.section`
 export const SecSecondInfos = styled.section`
   width: 100vw;
   height: 50vh;
+  padding: 5vw;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  aside{
+    width: 100%;
+    border: solid 2px #259073;
+    display: flex;
+    padding: 2vw;
+  }
   section{
+    border: solid 1px #259073;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 `
 export const LittleContent = styled.section`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  margin-right: 1vw;
   section{
     width: 40vw;
     height: 25vh;
   }
 `
 export const AnchorRedes = styled.a`
+  width: 100%;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  justify-content: center;
   img{
     width: 10vw;
     background-color: white;

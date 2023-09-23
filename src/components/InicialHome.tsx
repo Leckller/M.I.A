@@ -22,14 +22,14 @@ function InicialHome() {
           <section>
             <h2>Redes</h2>
             <AnchorRedes>
-            <a href="https://github.com/Leckller" target="_blank"><img src={github} alt="github" /></a>
-            <a href="https://www.instagram.com/ruy.jpg/" target="_blank"><img src={instagram} alt="instagram" /></a>
+              <a href="https://github.com/Leckller" target="_blank"><img src={github} alt="github" /></a>
+              <a href="https://www.instagram.com/ruy.jpg/" target="_blank"><img src={instagram} alt="instagram" /></a>
             </AnchorRedes>
           </section>
         </LittleContent>
         <aside>
           <p>
-
+            
           </p>
         </aside>
       </SecSecondInfos>

@@ -5,7 +5,7 @@ import { createGlobalStyle } from "styled-components"
 import { useState } from "react"
 
 function App() {
-  const [actualApi, setActualApi] = useState(1)
+  const [actualApi, setActualApi] = useState(0)
   const GlobalStyles = createGlobalStyle`
     * {
       margin: 0;
