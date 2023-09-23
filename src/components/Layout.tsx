@@ -2,13 +2,14 @@ import { Outlet } from "react-router-dom"
 import { DivLayoutBox, Footer, Header, Main, SecButton, SecButtonLD, TitleMAI } from "../styles"
 import SecOptions from "./SecOptions"
 import { useState } from "react"
+import { actualApiType } from "../services/types"
 
-function Layout() {
+function Layout({setActual, actual}:actualApiType) {
   const [configs, setConfigs] = useState(false)  
   return (
     <Main>
       {(window.innerWidth >= 400) && (
-          <SecOptions/>
+          <SecOptions actual={actual} setActual={setActual}/>
       )}
       <DivLayoutBox>
         <Header>
@@ -17,7 +18,7 @@ function Layout() {
         position={configs ? 'absolute' : 'static'}
         onClick={() => setConfigs(!configs)}>Projects</SecButton>
         )}
-        {configs && <SecOptions/>}
+        {configs && <SecOptions actual={actual} setActual={setActual}/>}
           <TitleMAI>M.A.I</TitleMAI>
           <SecButtonLD><img src="" alt="sun" /></SecButtonLD>
         </Header>

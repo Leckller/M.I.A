@@ -2,20 +2,27 @@ import { useEffect, useState } from "react"
 import { WeatherApi } from "../services/Apis"
 import { apiWeathertype } from "../services/types"
 import { MainContentWeather, SecCurrentWeather } from "../styles"
+import Loading from "./Loading"
 
 function Weather() {
   const [returnWeatherApi, setReturnWeatherApi] = useState<apiWeathertype>()
+  const [loading, setLoading] = useState(false)
   useEffect(() => {
 
     // primeiro parametro é o local, e o segundo um endpoint
     
     const weather = async () => {
+      setLoading(true)
       const response = await WeatherApi('niteroi', 'current');
       setReturnWeatherApi(response);
-      console.log(response)
+      setTimeout(() => {
+
+        setLoading(false)
+      }, 2000)
     }
     weather();
   }, [])
+  if(loading) return <Loading />;
   return (
     <MainContentWeather>
       <SecCurrentWeather>

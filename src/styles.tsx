@@ -201,3 +201,26 @@ export const SecCurrentWeather = styled.section`
   align-items: center;
   text-align: center;
 `
+
+// loading 
+
+export const MainLoading = styled.main`
+  width: 100vw;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  img{
+    width:50%;
+    animation: rotate 2s alternate infinite;
+  }
+  @keyframes rotate {
+    0%{
+      transform: rotate(0)
+    }
+    100%{
+      transform: rotate(360deg)
+    }
+  }
+`

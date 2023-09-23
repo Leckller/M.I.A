@@ -1,43 +1,43 @@
 export const projects = [
   {
-    title: '',
-    number: '',
+    title: 'Home',
+    number: 0,
+    background: '',
+    color: '',
+  },
+  {
+    title: 'Previsão do tempo',
+    number: 1,
     background: '',
     color: '',
   },
   {
     title: '',
-    number: '',
+    number: 2,
     background: '',
     color: '',
   },
   {
     title: '',
-    number: '',
+    number: 3,
     background: '',
     color: '',
   },
   {
     title: '',
-    number: '',
+    number: 4,
     background: '',
     color: '',
   },
   {
     title: '',
-    number: '',
+    number: 5,
     background: '',
     color: '',
   },
   {
     title: '',
-    number: '',
-    background: '',
-    color: '',
-  },
-  {
-    title: '',
-    number: '',
+    number: 6,
     background: '',
     color: '',
   }
