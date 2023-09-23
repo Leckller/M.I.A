@@ -205,6 +205,9 @@ export const AnchorRedes = styled.a`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  a{
+    margin: 1vw;
+  }
   img{
     width: 10vw;
     background-color: white;
@@ -220,6 +223,23 @@ export const MainContentWeather = styled.main`
   width: 100vw;
   height: 100%;
   align-items: center;
+  justify-content: space-around;
+  form{
+    display: flex;
+    height: 10vh;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    label{
+      display: flex;
+      height: 65%;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+    button{
+      width:100%;
+    }
+  }
 `
 export const SecCurrentWeather = styled.section`
   display: flex;
