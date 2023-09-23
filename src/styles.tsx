@@ -5,6 +5,8 @@ import { styled } from "styled-components";
     height: 100vh;
     display: flex;
     flex-direction: row;
+    background-color: #041122;
+    color: #259073;
   `
 
 // SecOptions
@@ -145,3 +147,41 @@ import { styled } from "styled-components";
       align-items: center
     `
 //  
+
+// InicialHome //
+
+export const MainHome = styled.main`
+  width: 100%;
+  height: 100%;
+`;
+export const SecPerfil = styled.section`
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  padding: 2vw;
+  align-items: center;
+  img{
+    width: 50vw;
+    height: 30vh;
+    border: solid black 5px;
+  }
+  p{
+    padding: 0 0 3vh 1vw;
+  }
+`;
+
+export const SecSecondInfos = styled.section`
+  width: 100vw;
+  height: 50vh;
+  section{
+    border: solid white 1px
+  }
+`
+export const LittleContent = styled.section`
+  display: flex;
+  flex-direction: column;
+  section{
+    width: 40vw;
+    height: 25vh;
+  }
+`

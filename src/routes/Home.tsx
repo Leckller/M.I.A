@@ -1,9 +1,10 @@
+import InicialHome from "../components/InicialHome"
 import { actualApiType } from "../services/types"
 
-export const Home = ({actual, setActual}:actualApiType) => {
+export const Home = ({actual}:actualApiType) => {
   return (
     <div>
-      conteudinho premium!
+      {(actual === 0) && <InicialHome/>}
     </div>
   )
 }

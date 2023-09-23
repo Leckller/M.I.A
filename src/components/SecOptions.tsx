@@ -5,7 +5,7 @@ function SecOptions() {
     <SecLayout>
 
       <SecLayoutDivHead>
-        Bem vindo! nome.
+        Bem vindo!
       </SecLayoutDivHead>
 
        <SecLayoutMainDiv>
