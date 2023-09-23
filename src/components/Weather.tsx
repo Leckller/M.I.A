@@ -33,7 +33,11 @@ function Weather() {
       <form onSubmit={(e) => e.preventDefault()}>
         <label htmlFor="inp">
           Insira o nome de um local
-          <input type="text" placeholder="Ex: Rio de Janeiro" id='inp' onKeyDown={(e) => setInput(e.target.value)}  />
+          <input 
+          type="text"
+          placeholder="Ex: Rio de Janeiro"
+          value={input}
+          id='inp' onChange={(e) => setInput(e.target.value)}  />
         </label>
         <button onClick={ () => setLocate(input) }>Enviar</button>
       </form>
