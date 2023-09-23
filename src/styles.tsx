@@ -69,7 +69,7 @@ import { styled } from "styled-components";
   }
   export const SecButton = styled.button<SecButtonType>`
     height: 4vh;
-    width: 10vw;
+    width: 20vw;
     position: ${prop => prop.position};
     z-index: 1000;
     right: 25vw;
@@ -102,7 +102,7 @@ import { styled } from "styled-components";
 
     export const SecButtonLD = styled.button`
     height: 4vh;
-    width: 10vw;
+    width: 20vw;
   `
   export const DivLayoutBox = styled.div`
     width: 85vw;
@@ -174,7 +174,6 @@ export const SecSecondInfos = styled.section`
   width: 100vw;
   height: 50vh;
   section{
-    border: solid white 1px
   }
 `
 export const LittleContent = styled.section`
@@ -184,4 +183,21 @@ export const LittleContent = styled.section`
     width: 40vw;
     height: 25vh;
   }
+`
+// Weather 
+
+export const MainContentWeather = styled.main`
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100%;
+  align-items: center;
+`
+export const SecCurrentWeather = styled.section`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 40%;
+  align-items: center;
+  text-align: center;
 `

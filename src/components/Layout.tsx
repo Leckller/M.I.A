@@ -15,7 +15,7 @@ function Layout() {
         {(window.innerWidth <= 400) && (
       <SecButton 
         position={configs ? 'absolute' : 'static'}
-        onClick={() => setConfigs(!configs)}>---</SecButton>
+        onClick={() => setConfigs(!configs)}>Projects</SecButton>
         )}
         {configs && <SecOptions/>}
           <TitleMAI>M.A.I</TitleMAI>

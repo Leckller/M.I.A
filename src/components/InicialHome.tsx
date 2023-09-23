@@ -14,7 +14,7 @@ function InicialHome() {
         <LittleContent>
           <section>
             <p>
-
+              
             </p>
           </section>
           <section>
@@ -24,7 +24,9 @@ function InicialHome() {
           </section>
         </LittleContent>
         <aside>
-          <p></p>
+          <p>
+
+          </p>
         </aside>
       </SecSecondInfos>
     </MainHome>
