@@ -4,8 +4,21 @@ import SecOptions from "./SecOptions"
 import { useState } from "react"
 import { actualApiType } from "../services/types"
 
+
 function Layout({setActual, actual}:actualApiType) {
   const [configs, setConfigs] = useState(false)  
+  if (configs) {
+    setTimeout(() => {
+      const btn = document.querySelector('#btnProjects')
+      btn.innerHTML = 'x';
+    }, 1);
+  }
+  else {
+    setTimeout(() => {
+      const btn = document.querySelector('#btnProjects')
+      btn.innerHTML = 'Projects';
+    }, 100);
+  }
   return (
     <Main>
       {(window.innerWidth >= 400) && (
@@ -16,7 +29,9 @@ function Layout({setActual, actual}:actualApiType) {
         {(window.innerWidth <= 400) && (
       <SecButton 
         position={configs ? 'absolute' : 'static'}
-        onClick={() => setConfigs(!configs)}>Projects</SecButton>
+        onClick={() => setConfigs(!configs)}
+        id='btnProjects'
+        >Projects</SecButton>
         )}
         {configs && <SecOptions actual={actual} setActual={setActual}/>}
           <TitleMAI>M.A.I</TitleMAI>
