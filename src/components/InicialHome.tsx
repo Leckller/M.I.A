@@ -1,5 +1,7 @@
-import { SecPerfil, MainHome, SecSecondInfos, LittleContent } from "../styles"
-import ruy from '../assets/ruy.png'
+import { SecPerfil, MainHome, SecSecondInfos, LittleContent, AnchorRedes } from "../styles";
+import ruy from '../assets/ruy.png';
+import github from '../assets/github.png';
+import instagram from '../assets/instagram.png';
 
 function InicialHome() {
   return (
@@ -14,13 +16,15 @@ function InicialHome() {
         <LittleContent>
           <section>
             <p>
-              
+              Clique no botão "Projects" para alternar entre meus projetos.
             </p>
           </section>
           <section>
-            <p>
-
-            </p>
+            <h2>Redes</h2>
+            <AnchorRedes>
+            <a href="https://github.com/Leckller" target="_blank"><img src={github} alt="github" /></a>
+            <a href="https://www.instagram.com/ruy.jpg/" target="_blank"><img src={instagram} alt="instagram" /></a>
+            </AnchorRedes>
           </section>
         </LittleContent>
         <aside>

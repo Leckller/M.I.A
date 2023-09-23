@@ -17,6 +17,7 @@ import { styled } from "styled-components";
     border: solid black 2px;
     display: flex;
     flex-direction: column;
+    z-index: 1000;
     @media (max-width: 400px) {
       width: 80vw;
       height: 100vh;
@@ -71,7 +72,7 @@ import { styled } from "styled-components";
     height: 4vh;
     width: 20vw;
     position: ${prop => prop.position};
-    z-index: 1000;
+    z-index: 1001;
     right: 25vw;
   `
   // ------------------------------------ //
@@ -184,6 +185,17 @@ export const LittleContent = styled.section`
     height: 25vh;
   }
 `
+export const AnchorRedes = styled.a`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  img{
+    width: 10vw;
+    background-color: white;
+    border-radius: 25%;
+  }
+`
+
 // Weather 
 
 export const MainContentWeather = styled.main`
@@ -196,15 +208,19 @@ export const MainContentWeather = styled.main`
 export const SecCurrentWeather = styled.section`
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 40%;
   align-items: center;
   text-align: center;
+  justify-content: space-around;
+  width: 80%;
+  height: 40%;
+  border: solid white 1px;
+  border-radius: 10%;
 `
 
 // loading 
 
 export const MainLoading = styled.main`
+  z-index: -1;
   width: 100vw;
   height: 60%;
   display: flex;
