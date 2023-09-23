@@ -18,7 +18,7 @@ import { styled } from "styled-components";
     display: flex;
     flex-direction: column;
     z-index: 1000;
-    @media (max-width: 400px) {
+    @media (max-width: 420px) {
       width: 80vw;
       height: 100vh;
       display: flex;
@@ -32,7 +32,7 @@ import { styled } from "styled-components";
   `
   export const SecLayoutDivHead = styled.header`
 
-    @media (max-width: 400px) {
+    @media (max-width: 420px) {
       display: flex;
       width: 100%;
       height: 10vh;
@@ -42,7 +42,7 @@ import { styled } from "styled-components";
   ` 
   export const SecLayoutMainDiv = styled.div`
 
-  @media (max-width: 400px) {
+  @media (max-width: 420px) {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -56,7 +56,7 @@ import { styled } from "styled-components";
     height: 10vh;
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 420px) {
     display: flex;
     width: 100%;
     align-items: center;
@@ -119,7 +119,7 @@ import { styled } from "styled-components";
       height: 80%;
     }
 
-    @media (max-width: 400px) {
+    @media (max-width: 420px) {
       width: 100vw;
       border-left: black solid 2px
     }

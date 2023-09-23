@@ -9,12 +9,12 @@ function Layout({setActual, actual}:actualApiType) {
   const [configs, setConfigs] = useState(false)  
   return (
     <Main>
-      {(window.innerWidth >= 400) && (
+      {(window.innerWidth >= 420) && (
           <SecOptions actual={actual} setActual={setActual}/>
       )}
       <DivLayoutBox>
         <Header>
-        {(window.innerWidth <= 400) && (
+        {(window.innerWidth <= 420) && (
       <SecButton 
         position={configs ? 'absolute' : 'static'}
         onClick={() => setConfigs(!configs)}
