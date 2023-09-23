@@ -1,34 +1,27 @@
+import { projects } from "../services/Projects"
+import { actualApiType } from "../services/types"
 import { SecLayout, SecLayoutDiv, SecLayoutDivHead, SecLayoutMainDiv } from "../styles"
 
-function SecOptions() {
+function SecOptions({setActual}:actualApiType) {
   return (
     <SecLayout>
 
       <SecLayoutDivHead>
-        Bem vindo! nome.
+        Bem vindo!
       </SecLayoutDivHead>
 
        <SecLayoutMainDiv>
-        <SecLayoutDiv>
+        
+        {projects.map((e) => (
+          <SecLayoutDiv>
 
-          <button>ApiX</button>
+            <button onClick={() => setActual(e.number)}>
+              {e.title}
+            </button>
 
-        </SecLayoutDiv>
-        <SecLayoutDiv>
+          </SecLayoutDiv>
+        ))}
 
-          <button>ApiX</button>
-
-        </SecLayoutDiv>
-        <SecLayoutDiv>
-
-          <button>ApiX</button>
-
-        </SecLayoutDiv>
-        <SecLayoutDiv>
-
-          <button>ApiX</button>
-
-        </SecLayoutDiv>
        </SecLayoutMainDiv>
        
     </SecLayout>

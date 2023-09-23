@@ -17,8 +17,8 @@ function App() {
     <>
       <GlobalStyles/>
       <Routes>
-        <Route path="/" element={<Layout />} >
-          <Route index element={<Home />} />
+        <Route path="/" element={<Layout actual={actualApi} setActual={setActualApi} />} >
+          <Route index element={<Home setActual={setActualApi} actual={actualApi} />} />
         </Route>
         <Route path="/*" element={<NotFound />} />
       </Routes>

@@ -5,6 +5,8 @@ import { styled } from "styled-components";
     height: 100vh;
     display: flex;
     flex-direction: row;
+    background-color: #041122;
+    color: #259073;
   `
 
 // SecOptions
@@ -15,6 +17,7 @@ import { styled } from "styled-components";
     border: solid black 2px;
     display: flex;
     flex-direction: column;
+    z-index: 1000;
     @media (max-width: 400px) {
       width: 80vw;
       height: 100vh;
@@ -67,9 +70,9 @@ import { styled } from "styled-components";
   }
   export const SecButton = styled.button<SecButtonType>`
     height: 4vh;
-    width: 10vw;
+    width: 20vw;
     position: ${prop => prop.position};
-    z-index: 1000;
+    z-index: 1001;
     right: 25vw;
   `
   // ------------------------------------ //
@@ -100,7 +103,7 @@ import { styled } from "styled-components";
 
     export const SecButtonLD = styled.button`
     height: 4vh;
-    width: 10vw;
+    width: 20vw;
   `
   export const DivLayoutBox = styled.div`
     width: 85vw;
@@ -145,3 +148,111 @@ import { styled } from "styled-components";
       align-items: center
     `
 //  
+
+// InicialHome //
+
+export const MainHome = styled.main`
+  width: 100%;
+  height: 100%;
+`;
+export const SecPerfil = styled.section`
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  padding: 2vw;
+  align-items: center;
+  img{
+    width: 50vw;
+    height: 30vh;
+    border: solid black 5px;
+  }
+  p{
+    padding: 0 0 3vh 1vw;
+  }
+`;
+
+export const SecSecondInfos = styled.section`
+  width: 100vw;
+  height: 50vh;
+  padding: 5vw;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  aside{
+    width: 100%;
+    border: solid 2px #259073;
+    display: flex;
+    padding: 2vw;
+  }
+  section{
+    border: solid 1px #259073;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+`
+export const LittleContent = styled.section`
+  display: flex;
+  flex-direction: row;
+  margin-right: 1vw;
+  section{
+    width: 40vw;
+    height: 25vh;
+  }
+`
+export const AnchorRedes = styled.a`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  img{
+    width: 10vw;
+    background-color: white;
+    border-radius: 25%;
+  }
+`
+
+// Weather 
+
+export const MainContentWeather = styled.main`
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100%;
+  align-items: center;
+`
+export const SecCurrentWeather = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  width: 80%;
+  height: 40%;
+  border: solid white 1px;
+  border-radius: 10%;
+`
+
+// loading 
+
+export const MainLoading = styled.main`
+  z-index: -1;
+  width: 100vw;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  img{
+    width:50%;
+    animation: rotate 2s alternate infinite;
+  }
+  @keyframes rotate {
+    0%{
+      transform: rotate(0)
+    }
+    100%{
+      transform: rotate(360deg)
+    }
+  }
+`
