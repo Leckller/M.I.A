@@ -10,7 +10,7 @@ function Layout({setActual, actual}:actualApiType) {
   return (
     <Main>
       {(window.innerWidth >= 420) && (
-          <SecOptions actual={actual} setActual={setActual}/>
+          <SecOptions close={configs} setClose={setConfigs} actual={actual} setActual={setActual}/>
       )}
       <DivLayoutBox>
         <Header>
@@ -21,7 +21,7 @@ function Layout({setActual, actual}:actualApiType) {
         id='btnProjects'
         >{configs ? 'x' : 'projects'}</SecButton>
         )}
-        {configs && <SecOptions actual={actual} setActual={setActual}/>}
+        {configs && <SecOptions close={configs} setClose={setConfigs} actual={actual} setActual={setActual}/>}
           <TitleMAI>M.A.I</TitleMAI>
           <SecButtonLD><img src="" alt="sun" /></SecButtonLD>
         </Header>

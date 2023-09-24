@@ -1,6 +1,8 @@
 export type actualApiType = {
   actual: number;
   setActual: (p: number) => void;
+  setClose: (p: boolean) => void;
+  close: boolean;
 }
 
 export type apiWeathertype ={
