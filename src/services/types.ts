@@ -10,6 +10,8 @@ export type oneApiType = {
   setActual: (p: number) => void;
 }
 
+export type animalsType = string[];
+
 export type apiWeathertype ={
   "location": {
     "name": string,

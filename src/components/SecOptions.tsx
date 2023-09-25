@@ -2,9 +2,9 @@ import { projects } from "../services/Projects"
 import { actualApiType } from "../services/types"
 import { ButtonSettingLayout, SecLayout, SecLayoutDiv, SecLayoutDivHead, SecLayoutMainDiv } from "../styles"
 
-function SecOptions({setActual, close, setClose}:actualApiType) {
+function SecOptions({setActual, close, setClose, actual}:actualApiType) {
   return (
-    <SecLayout>
+    <SecLayout ProjContent={projects[actual]}>
 
       <SecLayoutDivHead>
         Bem vindo!
