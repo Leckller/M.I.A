@@ -12,8 +12,9 @@ type MainType = {
     height: 100vh;
     display: flex;
     flex-direction: row;
+    transition: 1000ms;
     background-color: ${props => props.ProjContent.background};
-    color: #259073;
+    color: ${props => props.ProjContent.color};
   `
 
 // SecOptions
@@ -74,8 +75,13 @@ type MainType = {
 
   type SecButtonType = {
     position: string;
+    ProjContent: {
+      background: string,
+      color: string,
+    }
   }
   export const SecButton = styled.button<SecButtonType>`
+    transition: 1000ms;
     height: 4vh;
     width: 20vw;
     position: ${prop => prop.position};
@@ -87,7 +93,7 @@ type MainType = {
       width:50%;
     }
     h1{
-      color: #259073;
+      color: ${props => props.ProjContent.color};
     }
   `
 

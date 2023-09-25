@@ -20,6 +20,7 @@ function Layout({setActual, actual}:oneApiType) {
         <Header>
         {(window.innerWidth <= 420) && (
       <SecButton 
+        ProjContent={projects[actual]}
         position={configs ? 'absolute' : 'static'}
         onClick={() => setConfigs(!configs)}
         id='btnProjects'
