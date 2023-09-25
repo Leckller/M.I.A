@@ -17,13 +17,13 @@ export const projects = [
     title: 'Random Animals',
     number: 2,
     background: '#312305',
-    color: 'green',
+    color: '#0f4a0f',
   },
   {
-    title: '',
+    title: 'ruyTunes',
     number: 3,
-    background: '',
-    color: '',
+    background: 'green',
+    color: 'black',
     brightness: '',
   },
   {

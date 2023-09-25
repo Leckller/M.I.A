@@ -26,3 +26,12 @@ export const WeatherApi = async (cityURL: string, endP: string) => {
     alert('error')
   }
 }
+
+// term é o nome da pessoa que estamos
+
+export const iTunes = async (artistNameUrl) => {
+  const response = await fetch(`https://itunes.apple.com/search?term=luisa+sonza&entity=album`);
+  // const response = await fetch(`https://itunes.apple.com/search?entity=album&term=${artistNameUrl}&attribute=allArtistTerm`)
+  const data = (await response).json();
+  return data;
+}
