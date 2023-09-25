@@ -19,7 +19,7 @@ type MainType = {
 
 // SecOptions
 
-  export const SecLayout = styled.section`
+  export const SecLayout = styled.section<MainType>`
     width: 15vw;
     height: 100%;
     border: solid black 2px;
@@ -35,7 +35,8 @@ type MainType = {
       position: fixed;
       left: 0;
       top: 0;
-      background-color: #eaeaea;
+      background-color: ${props => props.ProjContent.background};
+      filter: brightness(125%);
     }
   `
   export const SecLayoutDivHead = styled.header`
@@ -307,6 +308,24 @@ export const MainLoading = styled.main`
     }
     100%{
       transform: rotate(360deg)
+    }
+  }
+`
+
+export const MainAnimals = styled.main`
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+  section{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img{
+      width: 50%;
+      border: solid black 2px;
+      border-radius: 10%;
     }
   }
 `
