@@ -1,8 +1,8 @@
 import { projects } from "../services/Projects"
 import { actualApiType } from "../services/types"
-import { SecLayout, SecLayoutDiv, SecLayoutDivHead, SecLayoutMainDiv } from "../styles"
+import { ButtonSettingLayout, SecLayout, SecLayoutDiv, SecLayoutDivHead, SecLayoutMainDiv } from "../styles"
 
-function SecOptions({setActual}:actualApiType) {
+function SecOptions({setActual, close, setClose}:actualApiType) {
   return (
     <SecLayout>
 
@@ -15,9 +15,12 @@ function SecOptions({setActual}:actualApiType) {
         {projects.map((e) => (
           <SecLayoutDiv>
 
-            <button onClick={() => setActual(e.number)}>
+            <ButtonSettingLayout onClick={() => {
+              setActual(e.number)
+              setClose(!close)
+            } }>
               {e.title}
-            </button>
+            </ButtonSettingLayout>
 
           </SecLayoutDiv>
         ))}

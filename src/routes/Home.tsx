@@ -1,8 +1,8 @@
 import InicialHome from "../components/InicialHome"
 import Weather from "../components/Weather"
-import { actualApiType } from "../services/types"
+import { oneApiType } from "../services/types"
 
-export const Home = ({actual}:actualApiType) => {
+export const Home = ({actual}:oneApiType) => {
   return (
     <div>
       {(actual === 0) && <InicialHome/>}

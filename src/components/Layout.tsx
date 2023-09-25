@@ -1,16 +1,20 @@
-import { Outlet } from "react-router-dom"
-import { DivLayoutBox, Footer, Header, Main, SecButton, SecButtonLD, TitleMAI } from "../styles"
-import SecOptions from "./SecOptions"
-import { useState } from "react"
-import { actualApiType } from "../services/types"
+import { Outlet } from "react-router-dom";
+import { DivLayoutBox, Footer, Header, Main, SecButton, SecButtonLD, TitleMAI } from "../styles";
+import SecOptions from "./SecOptions";
+import { useState } from "react";
+import { oneApiType } from "../services/types";
+import x from '../assets/x.png';
+import sun from '../assets/sol.png';
+import lua from '../assets/lua(1).png';
+import { projects } from "../services/Projects";
 
-
-function Layout({setActual, actual}:actualApiType) {
-  const [configs, setConfigs] = useState(false)  
+function Layout({setActual, actual}:oneApiType) {
+  const [configs, setConfigs] = useState(false);
+  const [ backMode, setBackMode] = useState(false);
   return (
-    <Main>
+    <Main ProjContent={projects[actual]}>
       {(window.innerWidth >= 420) && (
-          <SecOptions actual={actual} setActual={setActual}/>
+          <SecOptions close={configs} setClose={setConfigs} actual={actual} setActual={setActual}/>
       )}
       <DivLayoutBox>
         <Header>
@@ -19,11 +23,13 @@ function Layout({setActual, actual}:actualApiType) {
         position={configs ? 'absolute' : 'static'}
         onClick={() => setConfigs(!configs)}
         id='btnProjects'
-        >{configs ? 'x' : 'projects'}</SecButton>
+        >{configs ? <img src={x} /> : <h1>Projects</h1>}</SecButton>
         )}
-        {configs && <SecOptions actual={actual} setActual={setActual}/>}
-          <TitleMAI>M.A.I</TitleMAI>
-          <SecButtonLD><img src="" alt="sun" /></SecButtonLD>
+        {configs && <SecOptions close={configs} setClose={setConfigs} actual={actual} setActual={setActual}/>}
+          <TitleMAI>BETA1.1</TitleMAI>
+          <SecButtonLD onClick={
+            () => setBackMode(!backMode)
+          }>{backMode ? <img src={sun} alt='sun'/> : <img src={lua} alt='moon'/> }</SecButtonLD>
         </Header>
         <Outlet />
         <Footer>é o ruy</Footer>

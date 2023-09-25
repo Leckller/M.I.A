@@ -2,14 +2,14 @@ export const projects = [
   {
     title: 'Home',
     number: 0,
-    background: '',
-    color: '',
+    background: '#041122',
+    color: '#259073',
   },
   {
     title: 'Previsão do tempo',
     number: 1,
-    background: '',
-    color: '',
+    background: '#06006f',
+    color: '#eaeaea',
   },
   {
     title: '',

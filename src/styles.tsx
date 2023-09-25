@@ -1,11 +1,18 @@
 import { styled } from "styled-components";
 
-  export const Main = styled.main`
+type MainType = {
+  ProjContent: {
+    background: string,
+    color: string,
+  }
+}
+
+  export const Main = styled.main<MainType>`
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: row;
-    background-color: #041122;
+    background-color: ${props => props.ProjContent.background};
     color: #259073;
   `
 
@@ -74,12 +81,28 @@ import { styled } from "styled-components";
     position: ${prop => prop.position};
     z-index: 1001;
     right: 25vw;
+    border: none;
+    background-color: transparent;
+    img{
+      width:50%;
+    }
+    h1{
+      color: #259073;
+    }
   `
+
+  export const ButtonSettingLayout = styled.button`
+  font-size: 2rem;
+  font-variant: small-caps;
+  width: 100%;
+  &:hover{
+  }
+`
   // ------------------------------------ //
   // Layout
 
     export const TitleMAI = styled.h1`
-
+    font-size: 1.5rem;
     animation: jumping 1.5s alternate;
 
     @keyframes jumping {
@@ -104,6 +127,11 @@ import { styled } from "styled-components";
     export const SecButtonLD = styled.button`
     height: 4vh;
     width: 20vw;
+    border: none;
+    background-color: transparent;
+    img{
+      width: 50%;
+    }
   `
   export const DivLayoutBox = styled.div`
     width: 85vw;
