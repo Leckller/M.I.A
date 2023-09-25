@@ -1,3 +1,5 @@
+import { AlbumType } from "./types";
+
 export const ApiDog = async () => {
   const response = await fetch('https://random.dog/woof.json');
   const data = await response.json()
@@ -27,11 +29,16 @@ export const WeatherApi = async (cityURL: string, endP: string) => {
   }
 }
 
-// term é o nome da pessoa que estamos
+// term é o nome da pessoa que estamos buscando 
+// as palavras no fim são transformadas em no formato -> ' ' = +
 
-export const iTunes = async (artistNameUrl) => {
-  const response = await fetch(`https://itunes.apple.com/search?term=luisa+sonza&entity=album`);
-  // const response = await fetch(`https://itunes.apple.com/search?entity=album&term=${artistNameUrl}&attribute=allArtistTerm`)
-  const data = (await response).json();
-  return data;
+// o atributo entity se refere a que tipo de informação daquela pessoa estamos buscando
+// podendo ser album, movies, podcasts, music vidoes etc... mais info na documentação abaixo:
+
+// https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/SearchExamples.html#//apple_ref/doc/uid/TP40017632-CH6-SW1
+
+export const iTunes = async (term: string = 'luisa sonza', entity: string = 'album'): Promise<AlbumType[]> => {
+  const response = await fetch(`https://itunes.apple.com/search?term=${term}&entity=${entity}`);
+  const { results }: {results: AlbumType[]} = await response.json();
+  return results;
 }

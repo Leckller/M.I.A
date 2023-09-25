@@ -1,18 +1,22 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { iTunes } from "../services/Apis"
+import { AlbumType } from "../services/types"
+import MusicsRuyTunes from "./MusicsRuyTunes"
 
 function RuyTunes() {
+  const [returnMusics, setReturnMusics] = useState<AlbumType[]>([])
   useEffect(() => {
     const effect = async () => {
-      const response = await iTunes('Luisa+sonza');
+      const response = await iTunes();
       console.log(response);
+      setReturnMusics(response);
     }
     effect()
   }, [])
   return (
-    <div>
-      
-    </div>
+    <main>
+      <MusicsRuyTunes musics={returnMusics} />
+    </main>
   )
 }
 
