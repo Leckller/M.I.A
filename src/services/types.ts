@@ -5,6 +5,11 @@ export type actualApiType = {
   close: boolean;
 }
 
+export type oneApiType = {
+  actual: number;
+  setActual: (p: number) => void;
+}
+
 export type apiWeathertype ={
   "location": {
     "name": string,
