@@ -1,11 +1,18 @@
 import { styled } from "styled-components";
 
-  export const Main = styled.main`
+type MainType = {
+  ProjContent: {
+    background: string,
+    color: string,
+  }
+}
+
+  export const Main = styled.main<MainType>`
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: row;
-    background-color: #041122;
+    background-color: ${props => props.ProjContent.background};
     color: #259073;
   `
 

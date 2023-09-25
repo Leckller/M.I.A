@@ -6,12 +6,13 @@ import { oneApiType } from "../services/types";
 import x from '../assets/x.png';
 import sun from '../assets/sol.png';
 import lua from '../assets/lua(1).png';
+import { projects } from "../services/Projects";
 
 function Layout({setActual, actual}:oneApiType) {
   const [configs, setConfigs] = useState(false);
   const [ backMode, setBackMode] = useState(false);
   return (
-    <Main>
+    <Main ProjContent={projects[actual]}>
       {(window.innerWidth >= 420) && (
           <SecOptions close={configs} setClose={setConfigs} actual={actual} setActual={setActual}/>
       )}
