@@ -344,13 +344,26 @@ export const SecMusics = styled.section`
   @media ( max-width: 420px) {
     display: flex;
     width: 100%;
+    height: 30vh;
+    justify-content: center;
+    align-items: center;
+    margin: 1vh 0;
     a{
       display: flex;
+      width: 80%;
+      height: 100%;
       flex-direction: column;
       align-items: center;
+      justify-content: space-around;
       text-align: center;
       text-decoration: none;
       color: black;
+      border: solid black 2px;
+      border-radius: 5%;
+      background-color: #eaeaea;
+      img{
+        box-shadow: 9px 9px 9px black;
+      }
     }
   }
 `;
