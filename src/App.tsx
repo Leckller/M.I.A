@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom"
-import { Home, NotFound } from "./routes"
+import { Album, Home, NotFound } from "./routes"
 import Layout from "./components/Layout"
 import { createGlobalStyle } from "styled-components"
 import { useState } from "react"
@@ -22,6 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout actual={actualApi} setActual={setActualApi} />} >
           <Route index element={<Home setActual={setActualApi} actual={actualApi} />} />
+          <Route path="/album/:id" element={<Album/>} />
         </Route>
         <Route path="/*" element={<NotFound />} />
       </Routes>
