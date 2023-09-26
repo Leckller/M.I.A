@@ -329,3 +329,28 @@ export const MainAnimals = styled.main`
     }
   }
 `
+
+// ruyTunes //
+
+export const MainMusics = styled.main`
+  @media ( max-width: 420px ) {
+    width: 100vw;
+    height: 80vh;
+    overflow-y: auto;
+  }
+`
+
+export const SecMusics = styled.section`
+  @media ( max-width: 420px) {
+    display: flex;
+    width: 100%;
+    a{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      text-decoration: none;
+      color: black;
+    }
+  }
+`;
