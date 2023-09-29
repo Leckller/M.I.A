@@ -4,6 +4,7 @@ type MainType = {
   ProjContent: {
     background: string,
     color: string,
+    lightBackground: string;
   }
 }
 

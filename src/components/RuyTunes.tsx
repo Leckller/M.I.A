@@ -1,25 +1,25 @@
-import { useEffect, useState } from "react"
-import { iTunes } from "../services/Apis"
-import { AlbumType } from "../services/types"
+import { useEffect } from "react"
+import { Dispatch, GlobalStateType } from "../services/types"
 import MusicsRuyTunes from "./MusicsRuyTunes"
 import Loading from "./Loading";
+import { useDispatch, useSelector } from "react-redux";
+import { FetchItunes } from "../redux/actions";
 
 function RuyTunes() {
-  const [returnMusics, setReturnMusics] = useState<AlbumType[]>([]);
-  const [loading, setLoading] = useState(false);
+  const dispatch: Dispatch = useDispatch();
   useEffect(() => {
     const effect = async () => {
-      setLoading(true);
-      const response = await iTunes();
-      setReturnMusics(response);
-      setLoading(false);
+
+      dispatch(FetchItunes())
     }
     effect()
-  }, [])
-  if (loading) return <Loading />
+  }, [dispatch])
+  const store = useSelector((state:GlobalStateType) => state)
+
+  if (store.ruyTunes.isFetching) return <Loading />
   return (
     <main>
-      <MusicsRuyTunes musics={returnMusics} />
+      <MusicsRuyTunes />
     </main>
   )
 }
