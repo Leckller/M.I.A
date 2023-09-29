@@ -2,6 +2,7 @@ export const projects = [
   {
     title: 'Home',
     number: 0,
+    lightBackground: '',
     background: '#041122',
     color: '#259073',
     brightness: '',
@@ -9,6 +10,7 @@ export const projects = [
   {
     title: 'Previsão do tempo',
     number: 1,
+    lightBackground: '',
     background: '#06006f',
     color: '#eaeaea',
     brightness: '',
@@ -16,12 +18,14 @@ export const projects = [
   {
     title: 'Random Animals',
     number: 2,
+    lightBackground: '',
     background: '#312305',
     color: '#0f4a0f',
   },
   {
     title: 'ruyTunes',
     number: 3,
+    lightBackground: '',
     background: 'green',
     color: 'black',
     brightness: '',
@@ -29,6 +33,7 @@ export const projects = [
   {
     title: '',
     number: 4,
+    lightBackground: '',
     background: '',
     color: '',
     brightness: '',
@@ -36,6 +41,7 @@ export const projects = [
   {
     title: '',
     number: 5,
+    lightBackground: '',
     background: '',
     color: '',
     brightness: '',
@@ -43,6 +49,7 @@ export const projects = [
   {
     title: '',
     number: 6,
+    lightBackground: '',
     background: '',
     color: '',
     brightness: '',

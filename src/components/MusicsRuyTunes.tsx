@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom"
-import { AlbumType } from "../services/types"
 import { SecMusics, MainMusics } from "../styles"
+import { useSelector } from "react-redux"
+import { GlobalStateType } from "../services/types"
 
-function MusicsRuyTunes({musics}: {musics: AlbumType[]}) {
+function MusicsRuyTunes() {
+  const {ruyTunes: {Album}} = useSelector((state:GlobalStateType) => state)
   return (
     <MainMusics>
-      { musics.map((e) => (
+      { Album.map((e) => (
         <SecMusics>
           <Link to={`album/${e.artistId}`}>
             <h2>{`${e.collectionName}`}</h2>
